@@ -1,8 +1,16 @@
 {
   "name": "remotion-scene-kit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Reusable Remotion component library for developer-workflow demo videos: window frames, CLI primitives, and code/diff blocks.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UrNas/remotion-scene-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/UrNas/remotion-scene-kit/issues"
+  },
+  "homepage": "https://github.com/UrNas/remotion-scene-kit#readme",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
