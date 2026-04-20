@@ -9,3 +9,6 @@ export type { StreamingTextProps } from './cli/StreamingText';
 
 export { ToolCallBlock } from './cli/ToolCallBlock';
 export type { ToolCallBlockProps, ToolCallStatus } from './cli/ToolCallBlock';
+
+export { DiffBlock } from './cli/DiffBlock';
+export type { DiffBlockProps, DiffLine, DiffLineType } from './cli/DiffBlock';
