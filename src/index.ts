@@ -15,3 +15,6 @@ export type { ToolCallBlockProps, ToolCallStatus } from './cli/ToolCallBlock';
 
 export { DiffBlock } from './cli/DiffBlock';
 export type { DiffBlockProps, DiffLine, DiffLineType } from './cli/DiffBlock';
+
+export { TerminalMock } from './cli/TerminalMock';
+export type { TerminalMockProps, CliEvent } from './cli/TerminalMock';
