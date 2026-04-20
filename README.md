@@ -10,7 +10,7 @@ npm install remotion-scene-kit
 npm install shiki
 ```
 
-> Not yet published to npm. For local use: `npm run build && npm link` inside this repo, then `npm link remotion-scene-kit` in your Remotion project. Or depend on a path: `"remotion-scene-kit": "file:../remotion-scene-kit"` in your consumer's `package.json`.
+> For local development against this repo: `npm run build && npm link` inside this repo, then `npm link remotion-scene-kit` in your Remotion project. Or depend on a path: `"remotion-scene-kit": "file:../remotion-scene-kit"` in your consumer's `package.json`.
 
 Peer dependencies: `remotion ^4.0.0`, `react >=18`, `react-dom >=18`. `shiki >=1.0.0` is an **optional** peer — if it's missing at runtime, `CodeBlock` falls back to plain monospaced text.
 
