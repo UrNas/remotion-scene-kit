@@ -4,6 +4,9 @@ export type { Tokens } from './tokens';
 export { TerminalFrame } from './frames/TerminalFrame';
 export type { TerminalFrameProps } from './frames/TerminalFrame';
 
+export { BrowserFrame } from './frames/BrowserFrame';
+export type { BrowserFrameProps } from './frames/BrowserFrame';
+
 export { StreamingText } from './cli/StreamingText';
 export type { StreamingTextProps } from './cli/StreamingText';
 
