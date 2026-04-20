@@ -7,6 +7,9 @@ export type { TerminalFrameProps } from './frames/TerminalFrame';
 export { StreamingText } from './cli/StreamingText';
 export type { StreamingTextProps } from './cli/StreamingText';
 
+export { CodeBlock } from './cli/CodeBlock';
+export type { CodeBlockProps, CodeBlockReveal } from './cli/CodeBlock';
+
 export { ToolCallBlock } from './cli/ToolCallBlock';
 export type { ToolCallBlockProps, ToolCallStatus } from './cli/ToolCallBlock';
 
