@@ -1,6 +1,13 @@
 export { tokens, mergeTheme } from './tokens';
 export type { Tokens } from './tokens';
 
+export { fadeIn, fadeOut, slideIn, crossFade } from './animation';
+export type {
+  SlideDirection,
+  SlideInResult,
+  CrossFadeResult,
+} from './animation';
+
 export { TerminalFrame } from './frames/TerminalFrame';
 export type { TerminalFrameProps } from './frames/TerminalFrame';
 
