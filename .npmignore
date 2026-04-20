@@ -1,11 +1,41 @@
+# The `files` allowlist in package.json is the primary gate for what ships.
+# This is a defensive secondary filter.
+
+# Source & tests
 src
 test
 example
+
+# Build configs
 tsconfig*.json
 tsup.config.ts
 vitest.config.ts
+
+# Docs not meant for consumers
+PUBLISHING.md
+
+# Local / IDE / CI
 .editorconfig
 .gitignore
 .github
+.vscode
+.idea
+.DS_Store
+
+# Dependencies & lockfiles
 node_modules
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Logs & coverage
+*.log
+npm-debug.log*
 coverage
+
+# Packed tarballs
+*.tgz
+
+# Secrets
+.env
+.env.*
