@@ -1,5 +1,5 @@
 import type { CSSProperties, ReactNode } from 'react';
-import { useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useMemo } from 'react';
 import { useCurrentFrame, useVideoConfig } from 'remotion';
 import { tokens } from '../tokens';
 import { CodeBlock } from './CodeBlock';
@@ -148,27 +148,14 @@ export function TerminalMock({
     [events, fps],
   );
 
-  const viewportRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const [offsetY, setOffsetY] = useState(0);
-
-  useLayoutEffect(() => {
-    if (!autoScroll) {
-      setOffsetY(0);
-      return;
-    }
-    const vp = viewportRef.current;
-    const ct = contentRef.current;
-    if (!vp || !ct) return;
-    const next = Math.max(0, ct.scrollHeight - vp.clientHeight);
-    setOffsetY((prev) => (prev === next ? prev : next));
-  }, [frame, events, autoScroll]);
-
   const viewportStyle: CSSProperties = {
     position: 'relative',
     width: '100%',
     height: '100%',
     overflow: 'hidden',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: autoScroll ? 'flex-end' : 'flex-start',
     fontFamily: tokens.fonts.mono,
     fontSize: tokens.fontSize.md,
     color: tokens.colors.fg,
@@ -180,12 +167,12 @@ export function TerminalMock({
     display: 'flex',
     flexDirection: 'column',
     gap: tokens.spacing.sm,
-    transform: autoScroll ? `translateY(-${offsetY}px)` : undefined,
+    flexShrink: 0,
   };
 
   return (
-    <div ref={viewportRef} style={viewportStyle}>
-      <div ref={contentRef} style={contentStyle}>
+    <div style={viewportStyle}>
+      <div style={contentStyle}>
         {events.map((event, i) => {
           const start = startFrames[i];
           if (frame < start) return null;
